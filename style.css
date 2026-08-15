@@ -14,26 +14,6 @@ body {
     background: #fff;
     line-height: 1.6;
 }
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-
-.logo h2 {
-    color: #d4af37;
-    margin: 0;
-}
-
-.logo span {
-    font-size: 12px;
-}
 
 
 /* HEADER */
@@ -49,8 +29,8 @@ header {
 
     padding: 15px 7%;
 
-    background: #2332;
-    color: blue;
+    background: #111;
+    color: green;
 }
 
 .logo h2 {
@@ -79,8 +59,8 @@ nav a:hover {
 .menu-btn {
     display: none;
 
-    background: #222;
-    border: #22;
+    background: none;
+    border: none;
 
     color: white;
     font-size: 28px;
@@ -115,7 +95,7 @@ nav a:hover {
 }
 
 .welcome {
-    color: #d4af36;
+    color: #d4af37;
     font-weight: bold;
     letter-spacing: 3px;
 }
@@ -128,7 +108,7 @@ nav a:hover {
 
 .hero h1 span {
     display: block;
-    color: #d4af36;
+    color: #d4af37;
 }
 
 .hero p {
@@ -154,7 +134,7 @@ nav a:hover {
     padding: 13px 25px;
 
     background: #d4af37;
-    color: #1113;
+    color: #111;
 
     text-decoration: none;
 
@@ -223,7 +203,7 @@ nav a:hover {
     padding: 40px;
 
     background: #111;
-    color: 🍏 green;
+    color: white;
 
     border-radius: 15px;
 
@@ -535,4 +515,4 @@ footer h3 {
     .event-date {
         padding: 20px;
     }
-    }
+        }
