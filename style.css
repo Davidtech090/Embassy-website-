@@ -10,8 +10,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    color: #2233;
-    background: #ff2f;
+    color: #222;
+    background: #fff;
     line-height: 1.6;
 }
 .logo {
@@ -67,7 +67,7 @@ nav {
 }
 
 nav a {
-    color: 🍏 green;
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -79,10 +79,10 @@ nav a:hover {
 .menu-btn {
     display: none;
 
-    background: #2232;
+    background: #222;
     border: #22;
 
-    color: blue;
+    color: white;
     font-size: 28px;
 }
 
@@ -115,7 +115,7 @@ nav a:hover {
 }
 
 .welcome {
-    color: #d4af39;
+    color: #d4af36;
     font-weight: bold;
     letter-spacing: 3px;
 }
@@ -128,7 +128,7 @@ nav a:hover {
 
 .hero h1 span {
     display: block;
-    color: #d4af38;
+    color: #d4af36;
 }
 
 .hero p {
