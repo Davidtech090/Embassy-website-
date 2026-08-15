@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | EGPGA</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- LOGIN PAGE -->
+    <div id="loginPage" class="login-page">
+
+        <div class="login-box">
+
+            <div class="admin-logo">
+                EGPGA
+            </div>
+
+            <h1>Admin Login</h1>
+
+            <p>Embassy Of God's Presence Global Arena</p>
+
+            <form id="loginForm">
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+                <p id="loginMessage"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADMIN DASHBOARD -->
+    <div id="dashboard" class="dashboard hidden">
+
+        <header class="admin-header">
+
+            <div>
+                <h2>EGPGA Admin</h2>
+                <small>Church Management Dashboard</small>
+            </div>
+
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+
+        </header>
+
+
+        <main>
+
+            <h1>Dashboard</h1>
+
+            <!-- STATISTICS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <span>👥</span>
+                    <h3 id="totalMembers">0</h3>
+                    <p>Total Members</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>🙋</span>
+                    <h3 id="totalVisitors">0</h3>
+                    <p>Visitors</p>
+                </div>
+
+                <div class="stat-card">
+                    <span>📝</span>
+                    <h3 id="totalRegistrations">0</h3>
+                    <p>Registrations</p>
+                </div>
+
+            </div>
+
+
+            <!-- RECORDS -->
+
+            <section class="records">
+
+                <div class="records-header">
+
+                    <h2>Recent Registrations</h2>
+
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="Search records..."
+                    >
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="recordsTable">
+
+                            <tr>
+                                <td colspan="4">
+                                    No records yet
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
