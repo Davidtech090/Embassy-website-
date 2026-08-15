@@ -1,0 +1,17 @@
+{
+    "name": "my calculator",
+    "short-name": "calculator",
+    "start-url": "index.html",
+    "display": "standalone",
+    "background-color": "#222222",
+    "theme-color": "#222222",
+    
+    "icons":[
+        {
+            "src": "icon.png",
+            "sizes": "1254x1254",
+            "type": "image/png"
+        }
+    ]
+}
+   
