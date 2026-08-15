@@ -14,6 +14,26 @@ body {
     background: #fff;
     line-height: 1.6;
 }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    color: #d4af37;
+    margin: 0;
+}
+
+.logo span {
+    font-size: 12px;
+}
 
 
 /* HEADER */
