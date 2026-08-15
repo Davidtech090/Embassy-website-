@@ -1,62 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device-width,
-        initial-scale=1.0">
-        <title>My calculator</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="manifest"
-        href="manifest.json">
-    </head>
-    <body>
-        <div class=" calculator">
-            <input type="text" id="disply"
-            randonly>
-            <div class="buttons">
-                <button
-        onclick="cleardisplay()">c</button>
-                 <button
-        onclick="deletelast()">Del</button>
-        <button
-        onclick="addtodisplay('%')">%</button>
-        <button
-        onclick="addtodisplay('/')">/</button>
-        <button
-        onclick="addtodisplay('7')">7</button>
-        <button
-        onclick="addtodisplay('8')">8</button>
-        <button
-        onclick="addtodisplay('9')">9</button>
-        <button
-        onclick="addtodisplay('*')">*</button>
-        <button
-        onclick="addtodisplay('4')">4</button>
-        <button
-        onclick="addtodisplay('5')">5</button>
-        <button
-        onclick="addtodisplay('6')">6</button>
-        <button
-        onclick="addtodisplay('-')">-</button>
-        <button
-        onclick="addtodisplay('1')">1</button>
-        <button
-        onclick="addtodisplay('2')">2</button>
-        <button
-        onclick="addtodisplay('3')">3</button>
-        <button
-        onclick="addtodisplay('+')">+</button>
-        <button
-        onclick="addtodisplay('0')">0</button>
-        <button
-        onclick="addtodisplay('.')">.</button>
-        <button onclick="calculate()"
-        class="equal">=</button>
-            </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Embassy Of God's Presence Global Arena | Makurdi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            <h2>EGPGA</h2>
+            <span>Embassy Of God's Presence</span>
         </div>
-        <script src="script.js"></script>
-           
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#ministries">Ministries</a>
+            <a href="#events">Events</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="welcome">WELCOME TO</p>
+
+            <h1>
+                Embassy Of God's
+                <span>Presence Global Arena</span>
+            </h1>
+
+            <p>
+                A place where lives are transformed,
+                destinies are restored and people encounter
+                the presence of God.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#register" class="btn">Register With Us</a>
+                <a href="#about" class="btn outline">Learn More</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+
+        <div class="section-title">
+            <p>WHO WE ARE</p>
+            <h2>About Our Church</h2>
+        </div>
+
+        <div class="about-container">
+
+            <div class="about-text">
+
+                <h3>Embassy Of God's Presence Global Arena</h3>
+
+                <p>
+                    Embassy Of God's Presence Global Arena is a
+                    Christian community committed to helping people
+                    discover God, grow in faith and fulfil their
+                    God-given purpose.
+                </p>
+
+                <p>
+                    We believe in the transforming power of God's
+                    Word, prayer, worship and fellowship.
+                </p>
+
+                <a href="#register" class="btn">
+                    Join Our Family
+                </a>
+
+            </div>
+
+            <div class="about-card">
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To raise transformed lives who will represent
+                    God's presence and purpose in their generation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services" class="section services-section">
+
+        <div class="section-title">
+            <p>JOIN US</p>
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🙏</div>
+                <h3>Sunday Service</h3>
+                <p>
+                    Join us for powerful worship, God's Word
+                    and fellowship.
+                </p>
+                <strong>Sunday</strong>
+            </div>
+
+            <div class="card">
+                <div class="icon">📖</div>
+                <h3>Bible Study</h3>
+                <p>
+                    Grow deeper in God's Word and strengthen
+                    your faith.
+                </p>
+                <strong>Weekly</strong>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔥</div>
+                <h3>Prayer Meeting</h3>
+                <p>
+                    Come together as we seek God through
+                    prayer and intercession.
+                </p>
+                <strong>Weekly</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MINISTRIES -->
+    <section id="ministries" class="section">
+
+        <div class="section-title">
+            <p>GET INVOLVED</p>
+            <h2>Our Ministries</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card ministry">
+                <h3>Men's Ministry</h3>
+                <p>
+                    Building godly men who lead with faith,
+                    wisdom and purpose.
+                </p>
+            </div>
+
+            <div class="card ministry">
+                <h3>Women's Ministry</h3>
+                <p>
+                    Empowering women to grow spiritually and
+                    fulfil their God-given purpose.
+                </p>
+            </div>
+
+            <div class="card ministry">
+                <h3>Youth Ministry</h3>
+                <p>
+                    Raising young people who will positively
+                    impact their generation.
+                </p>
+            </div>
+
+            <div class="card ministry">
+                <h3>Children's Ministry</h3>
+                <p>
+                    Teaching children God's Word and helping
+                    them grow in faith.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EVENTS -->
+    <section id="events" class="section events-section">
+
+        <div class="section-title">
+            <p>WHAT'S HAPPENING</p>
+            <h2>Upcoming Events</h2>
+        </div>
+
+        <div class="event">
+
+            <div class="event-date">
+                <strong>2026</strong>
+                <span>EVENT</span>
+            </div>
+
+            <div class="event-info">
+                <h3>Church Special Program</h3>
+
+                <p>
+                    Join us for a powerful time of worship,
+                    prayer and the Word of God.
+                </p>
+
+                <a href="#register" class="btn">
+                    Register
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGISTRATION -->
+    <section id="register" class="section register-section">
+
+        <div class="section-title">
+            <p>CONNECT WITH US</p>
+            <h2>Church Registration</h2>
+
+            <p>
+                Fill in your details below to register as a
+                visitor or member of our church family.
+            </p>
+        </div>
+
+
+        <form id="registrationForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="08012345678"
+                        required
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@email.com"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label>Gender</label>
+
+                    <select id="gender" required>
+
+                        <option value="">
+                            Select Gender
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label>Date of Birth</label>
+
+                    <input
+                        type="date"
+                        id="dob"
+                    >
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Membership Status</label>
+
+                    <select id="membership" required>
+
+                        <option value="">
+                            Select Status
+                        </option>
+
+                        <option value="First Timer">
+                            First Timer
+                        </option>
+
+                        <option value="Visitor">
+                            Visitor
+                        </option>
+
+                        <option value="Member">
+                            Member
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Address</label>
+
+                <textarea
+                    id="address"
+                    placeholder="Enter your address"
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Ministry / Department</label>
+
+                <select id="ministry">
+
+                    <option value="">
+                        Select Ministry
+                    </option>
+
+                    <option value="Men's Ministry">
+                        Men's Ministry
+                    </option>
+
+                    <option value="Women's Ministry">
+                        Women's Ministry
+                    </option>
+
+                    <option value="Youth Ministry">
+                        Youth Ministry
+                    </option>
+
+                    <option value="Children's Ministry">
+                        Children's Ministry
+                    </option>
+
+                    <option value="Choir">
+                        Choir
+                    </option>
+
+                    <option value="Media">
+                        Media
+                    </option>
+
+                    <option value="Ushering">
+                        Ushering
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+                Submit Registration
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+
+        <div class="section-title">
+
+            <p>GET IN TOUCH</p>
+
+            <h2>Contact Us</h2>
+
+        </div>
+
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <div class="contact-icon">📍</div>
+
+                <h3>Location</h3>
+
+                <p>
+                    Makurdi, Benue State, Nigeria
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">📞</div>
+
+                <h3>Phone</h3>
+
+                <p>
+                    Add Church Phone Number
+                </p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="contact-icon">✉️</div>
+
+                <h3>Email</h3>
+
+                <p>
+                    Add Church Email
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>
+            Embassy Of God's Presence Global Arena
+        </h3>
+
+        <p>
+            Makurdi, Benue State, Nigeria
+        </p>
+
+        <p class="copyright">
+            © 2026 Embassy Of God's Presence Global Arena.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
-</html>
-   
+    </html>
