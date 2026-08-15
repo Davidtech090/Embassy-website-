@@ -1,42 +1,53 @@
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
+// MOBILE MENU
 
-    justify-content: center;
-    align-items: center;
+function toggleMenu() {
 
-    background-color: #333
-    border-radius: 15px;
+    const navMenu =
+        document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+
 }
-#display {
-    width: 100%;
-    height: 90px;
 
-    box-sizing: border-box;
 
-    margin-bottom: 15px;
-    padding: 10px;
+// REGISTRATION FORM
 
-    font-size: 40px;
-    text-align: right;
-}
-.buttons {
-    display: grid;
-    grid-template-columns:
-    repeat(4, 1fr);
-    gap: 10px;
-}
-button {
-    height: 60px;
+const registrationForm =
+    document.getElementById("registrationForm");
 
-    font-size: 20px;
 
-    border: none;
-    border-radius: 10px;
+registrationForm.addEventListener(
+    "submit",
+    function(event) {
 
-    cursor: pointer;
-}
-.equal {
-    grid-column: span 2;
-}
+        event.preventDefault();
+
+
+        const fullName =
+            document.getElementById("fullName").value;
+
+        const message =
+            document.getElementById("message");
+
+
+        if (fullName.trim() === "") {
+
+            message.textContent =
+                "Please enter your full name.";
+
+            message.style.color = "red";
+
+            return;
+        }
+
+
+        message.textContent =
+            "Registration received successfully!";
+
+        message.style.color = "green";
+
+
+        registrationForm.reset();
+
+    }
+);
