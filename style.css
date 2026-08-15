@@ -67,7 +67,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: 🍏 green;
     text-decoration: none;
     font-weight: bold;
 }
@@ -82,7 +82,7 @@ nav a:hover {
     background: #2232;
     border: #22;
 
-    color: white;
+    color: blue;
     font-size: 28px;
 }
 
@@ -115,7 +115,7 @@ nav a:hover {
 }
 
 .welcome {
-    color: #d4af37;
+    color: #d4af39;
     font-weight: bold;
     letter-spacing: 3px;
 }
@@ -128,7 +128,7 @@ nav a:hover {
 
 .hero h1 span {
     display: block;
-    color: #d4af37;
+    color: #d4af38;
 }
 
 .hero p {
@@ -154,7 +154,7 @@ nav a:hover {
     padding: 13px 25px;
 
     background: #d4af37;
-    color: #111;
+    color: #1113;
 
     text-decoration: none;
 
@@ -223,7 +223,7 @@ nav a:hover {
     padding: 40px;
 
     background: #111;
-    color: white;
+    color: 🍏 green;
 
     border-radius: 15px;
 
