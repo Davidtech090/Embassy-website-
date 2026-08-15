@@ -29,8 +29,8 @@ header {
 
     padding: 15px 7%;
 
-    background: #111;
-    color: white;
+    background: #2332;
+    color: blue;
 }
 
 .logo h2 {
@@ -59,8 +59,8 @@ nav a:hover {
 .menu-btn {
     display: none;
 
-    background: none;
-    border: none;
+    background: #2232;
+    border: #22;
 
     color: white;
     font-size: 28px;
