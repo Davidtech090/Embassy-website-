@@ -31,8 +31,8 @@ loginForm.addEventListener("submit", function(event) {
     */
 
     if (
-        username === "admin" &&
-        password === "admin123"
+        username === "embassyweb" &&
+        password === "Davidchahul090"
     ) {
 
         loginPage.classList.add("hidden");
