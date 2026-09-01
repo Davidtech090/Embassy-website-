@@ -14,7 +14,53 @@ body {
     background: #fff;
     line-height: 1.6;
 }
+.messages {
+  padding: 20px;
+  margin-top: 30px;
+}
 
+.messages h2 {
+  text-align: center;
+  color: #FFD700; /* gold */
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.sermon-card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border-left: 5px solid #FFD700;
+  text-align: center;
+}
+
+.sermon-card h3 {
+  margin: 0 0 8px 0;
+  color: #111;
+}
+
+.sermon-card p {
+  margin: 0 0 15px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #111;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background: #FFD700;
+  color: #111;
+}
 
 /* HEADER */
 
