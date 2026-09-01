@@ -1,159 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Admin Dashboard | EGPGA</title>
-
-    <link rel="stylesheet" href="admin.css">
+  <title>Admin Login - Embassy</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .login-box { max-width:400px; margin:100px auto; padding:30px; background:white; border-radius:12px; text-align:center; }
+    input { width:90%; padding:10px; margin:10px 0; border-radius:8px; border:1px solid #ccc; }
+    button { background:#111; color:white; padding:12px 25px; border:none; border-radius:8px; cursor:pointer; }
+    button:hover { background:#FFD700; color:#111; }
+    .hidden { display:none; }
+  </style>
 </head>
-
 <body>
-
-    <!-- LOGIN PAGE -->
-    <div id="loginPage" class="login-page">
-
-        <div class="login-box">
-
-            <div class="admin-logo">
-                EGPGA
-            </div>
-
-            <h1>Admin Login</h1>
-
-            <p>Embassy Of God's Presence Global Arena</p>
-
-            <form id="loginForm">
-
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Username"
-                    required
-                >
-
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    required
-                >
-
-                <button type="submit">
-                    Login
-                </button>
-
-                <p id="loginMessage"></p>
-
-            </form>
-
-        </div>
-
+  <div class="login-box">
+    <h2>Admin Login</h2>
+    
+    <div id="loginForm">
+      <input type="password" id="password" placeholder="Enter Admin Password">
+      <br>
+      <button onclick="checkLogin()">Login</button>
+      <p id="error" style="color:red;"></p>
     </div>
 
-
-    <!-- ADMIN DASHBOARD -->
-    <div id="dashboard" class="dashboard hidden">
-
-        <header class="admin-header">
-
-            <div>
-                <h2>EGPGA Admin</h2>
-                <small>Church Management Dashboard</small>
-            </div>
-
-            <button onclick="logout()" class="logout-btn">
-                Logout
-            </button>
-
-        </header>
-
-
-        <main>
-
-            <h1>Dashboard</h1>
-
-            <!-- STATISTICS -->
-
-            <div class="stats">
-
-                <div class="stat-card">
-                    <span>👥</span>
-                    <h3 id="totalMembers">0</h3>
-                    <p>Total Members</p>
-                </div>
-
-                <div class="stat-card">
-                    <span>🙋</span>
-                    <h3 id="totalVisitors">0</h3>
-                    <p>Visitors</p>
-                </div>
-
-                <div class="stat-card">
-                    <span>📝</span>
-                    <h3 id="totalRegistrations">0</h3>
-                    <p>Registrations</p>
-                </div>
-
-            </div>
-
-
-            <!-- RECORDS -->
-
-            <section class="records">
-
-                <div class="records-header">
-
-                    <h2>Recent Registrations</h2>
-
-                    <input
-                        type="search"
-                        id="searchInput"
-                        placeholder="Search records..."
-                    >
-
-                </div>
-
-
-                <div class="table-container">
-
-                    <table>
-
-                        <thead>
-
-                            <tr>
-                                <th>Name</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                            </tr>
-
-                        </thead>
-
-                        <tbody id="recordsTable">
-
-                            <tr>
-                                <td colspan="4">
-                                    No records yet
-                                </td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </section>
-
-        </main>
-
+    <div id="adminPanel" class="hidden">
+      <h3>✅ Welcome</h3>
+      <p>Add new sermon details here. Then copy the code below to index.html</p>
+      
+      <input type="text" id="title" placeholder="Sermon Title">
+      <input type="text" id="speaker" placeholder="Speaker Name">
+      <input type="text" id="date" placeholder="Date: Sept 1, 2026">
+      <input type="text" id="link" placeholder="MP3 Link or Google Drive Link">
+      
+      <button onclick="generateCode()">Generate Sermon Code</button>
+      
+      <textarea id="output" rows="6" style="width:90%; margin-top:10px;"></textarea>
+      <p>Copy this and paste in index.html inside the messages section</p>
     </div>
+  </div>
 
+<script>
+  const ADMIN_PASSWORD = "embassy2026"; // <-- CHANGE THIS PASSWORD
 
-    <script src="admin.js"></script>
+  function checkLogin(){
+    const pass = document.getElementById('password').value;
+    if(pass === ADMIN_PASSWORD){
+      document.getElementById('loginForm').classList.add('hidden');
+      document.getElementById('adminPanel').classList.remove('hidden');
+    } else {
+      document.getElementById('error').innerText = "Wrong Password!";
+    }
+  }
 
+  function generateCode(){
+    const t = document.getElementById('title').value;
+    const s = document.getElementById('speaker').value;
+    const d = document.getElementById('date').value;
+    const l = document.getElementById('link').value;
+    
+    const code = `
+<div class="sermon-card">
+  <h3>${t}</h3>
+  <p>Speaker: ${s} | Date: ${d}</p>
+  <a href="${l}" target="_blank" class="download-btn">Download MP3</a>
+</div>`;
+    document.getElementById('output').value = code;
+  }
+</script>
 </body>
 </html>
