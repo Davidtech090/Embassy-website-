@@ -1,78 +1,39 @@
-const loginForm =
-    document.getElementById("loginForm");
+const loginForm = document.getElementById("loginForm");
+const loginMessage = document.getElementById("loginMessage");
+const loginPage = document.getElementById("loginPage");
+const dashboard = document.getElementById("dashboard");
 
-const loginPage =
-    document.getElementById("loginPage");
+loginForm.addEventListener("submit", async function(event) {
+  event.preventDefault();
 
-const dashboard =
-    document.getElementById("dashboard");
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
 
-const loginMessage =
-    document.getElementById("loginMessage");
+  loginMessage.textContent = "Logging in...";
 
+  try {
+    const response = await fetch("https://your-render-url.onrender.com/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password })
+    });
 
-loginForm.addEventListener("submit", function(event) {
+    const data = await response.json();
 
-    event.preventDefault();
-
-    const username =
-        document.getElementById("username").value;
-
-    const password =
-        document.getElementById("password").value;
-
-
-    /*
-       DEMO LOGIN ONLY
-
-       This is NOT secure authentication.
-       We will replace this with real
-       database authentication later.
-    */
-
-    if (
-        username === "embassyweb" &&
-        password === "Davidchahul090"
-    ) {
-
-        loginPage.classList.add("hidden");
-
-        dashboard.classList.remove("hidden");
-
-        loginMessage.textContent = "";
-
-        loadDashboard();
-
+    if (response.ok) {
+      loginMessage.textContent = "";
+      loginPage.classList.add("hidden");
+      dashboard.classList.remove("hidden");
+      localStorage.setItem("token", data.token);
+      loadDashboard();
     } else {
-
-        loginMessage.textContent =
-            "Incorrect username or password.";
-
+      loginMessage.textContent = data.message;
     }
-
+  } catch (error) {
+    loginMessage.textContent = "Cannot connect to server";
+  }
 });
 
-
-function logout() {
-
-    dashboard.classList.add("hidden");
-
-    loginPage.classList.remove("hidden");
-
-    document.getElementById("password").value = "";
-
-}
-
-
 function loadDashboard() {
-
-    document.getElementById("totalMembers")
-        .textContent = "0";
-
-    document.getElementById("totalVisitors")
-        .textContent = "0";
-
-    document.getElementById("totalRegistrations")
-        .textContent = "0";
-
+  // your dashboard code
 }
