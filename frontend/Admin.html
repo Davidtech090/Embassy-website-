@@ -52,13 +52,12 @@
   }
 
   function generateCode(){
-    const t = document.getElementById('All message').value;
-    const s = document.getElementById('Pastor Bright Adeyi').value;
-    const d = document.getElementById('2026/2027').value;
-    const l = document.getElementById('coming soon').value;
+    const t = document.getElementById('title').value;
+    const s = document.getElementById('speaker').value;
+    const d = document.getElementById('date').value;
+    const l = document.getElementById('link').value;
     
-    const code = `
-<div class="sermon-card">
+    const code = `<div class="sermon-card">
   <h3>${t}</h3>
   <p>Speaker: ${s} | Date: ${d}</p>
   <a href="${l}" target="_blank" class="download-btn">Download MP3</a>
